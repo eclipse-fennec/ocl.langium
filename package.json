@@ -27,7 +27,7 @@
   "dependencies": {
     "@emfts/core": "0.1.1-next.2",
     "@emfts/ocl.model": "0.0.1-next.2",
-    "langium": "^3.3.1",
+    "langium": "^4.2.2",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.12"
   },
@@ -36,7 +36,7 @@
     "@commitlint/config-conventional": "^20.5.0",
     "@types/node": "^24.10.1",
     "husky": "^9.1.7",
-    "langium-cli": "^3.3.1",
+    "langium-cli": "^4.2.0",
     "typescript": "^5.0.0",
     "vitest": "^4.0.15"
   },
