@@ -1,0 +1,51 @@
+{
+  "name": "@emfts/ocl.langium",
+  "version": "0.0.1-next.1",
+  "description": "Langium-based OCL parser with LSP support for EMFTS",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "langium:generate": "langium generate",
+    "build": "npm run langium:generate && tsc",
+    "watch": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@emfts/core": "0.1.1-next.2",
+    "@emfts/ocl.model": "0.0.1-next.2",
+    "langium": "^3.3.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@types/node": "^24.10.1",
+    "husky": "^9.1.7",
+    "langium-cli": "^3.3.1",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.15"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclipse-fennec/ocl.langium.git"
+  },
+  "license": "EPL-2.0"
+}

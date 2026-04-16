@@ -1,0 +1,14 @@
+{
+  "projectName": "OclLangium",
+  "languages": [
+    {
+      "id": "ocl",
+      "grammar": "src/grammar/ocl.langium",
+      "fileExtensions": [".ocl"],
+      "textMate": {
+        "out": "syntaxes/ocl.tmLanguage.json"
+      }
+    }
+  ],
+  "out": "src/generated"
+}

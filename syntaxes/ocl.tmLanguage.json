@@ -1,0 +1,61 @@
+{
+  "name": "ocl",
+  "scopeName": "source.ocl",
+  "fileTypes": [
+    ".ocl"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.ocl",
+      "match": "\\b(Bag|Collection|DERIVED|OrderedSet|REFERENCE_FILTER|Sequence|Set|Tuple|VALIDATION|and|body|context|def|derive|div|else|endif|false|if|implies|in|init|inv|invalid|let|mod|not|null|or|post|pre|self|then|true|xor)\\b"
+    },
+    {
+      "name": "string.quoted.single.ocl",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "include": "#string-character-escape"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.ocl",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.ocl"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.ocl"
+            }
+          }
+        },
+        {
+          "begin": "--",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.ocl"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.ocl"
+        }
+      ]
+    },
+    "string-character-escape": {
+      "name": "constant.character.escape.ocl",
+      "match": "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|u\\{[0-9A-Fa-f]+\\}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)"
+    }
+  }
+}
